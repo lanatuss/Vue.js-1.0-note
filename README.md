@@ -1,1 +1,1 @@
-"# Vue.js-1.0-note" 
+# Vue.js-1.0-note
