@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue Js</title>
+    </head>
+    <body>
+        <div id="app">
+               <counter heading="赞" color="green"></counter>
+               <counter heading="踩" color="red"></counter>
+        </div>
+
+        <template id="template-counter">
+            <h1>{{ heading }}</h1>
+            <button type="button" @click="count + = 1" style="background:{{ color }}">{{ count}}</button>
+        </template>
+
+        <script src="../js/vue.min.js"></script>
+         <script>
+             Vue.component('counter',{
+                 template:'#template-counter',
+                 props:['heading','color'],
+                 data : function(){
+                      return {  count : 0};
+                         
+                 }
+             });
+         new Vue({
+            el:'#app'
+         })
+         </script>       
+    </body>
+</html>
